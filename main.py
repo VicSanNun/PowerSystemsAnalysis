@@ -1,4 +1,9 @@
 from tkinter import *
+from PhaseRepresentation import PhaseRepresentation
+import matplotlib.pyplot as plt
+import numpy as np
+
+pr = PhaseRepresentation
 
 window = Tk()
 
@@ -8,7 +13,7 @@ text = Label(window, text="Escolha Qual Função Executar")
 text.grid(column=0, row=0, padx=70, pady=30)
 
 #button = Button(window, text="Representação de Fase", command=pegar_cotacoes)
-buttonPhase = Button(window, text="Representação de Fase")
+buttonPhase = Button(window, text="Representação de Fase", command=pr.windowpr())
 buttonPhase.grid(column=0, row=1, padx=10, pady=20)
 
 buttonSim = Button(window, text="Componentes Simétricas")
